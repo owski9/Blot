@@ -1,0 +1,48 @@
+const width = 125;
+const height = 125;
+
+
+setDocDimensions(width, height);
+
+
+// store final lines here
+const finalLines = [];
+drawLines([
+    [[100, 100], [125, 125]]
+])
+const t = new bt.Turtle()
+const size = 100
+
+
+t.forward(size)
+t.left(90)
+t.forward(size)
+t.left(90)
+t.forward(size)
+
+
+drawLines(t.lines())
+
+
+// create a polyline
+const polyline = [
+  [90, 50],
+  [100, 90],
+  [100, 30],
+  [125, 270],
+  [50, 150]
+];
+
+
+// add the polyline to the final lines
+finalLines.push(polyline);
+
+
+// transform lines using the toolkit
+bt.rotate(finalLines, 45);
+
+
+// draw it
+drawLines(finalLines);
+
+
